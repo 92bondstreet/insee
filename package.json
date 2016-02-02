@@ -1,0 +1,14 @@
+{
+  "name": "insee",
+  "version": "1.0.0",
+  "description": "Get INSEE code from zipcode and city name",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joliscri.pt <joli.script@gmail.com> (http://joliscri.pt/)",
+  "license": "uncopyrighted",
+  "dependencies": {
+    "superagent": "^1.7.2"
+  }
+}
