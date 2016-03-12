@@ -3,12 +3,23 @@
   "version": "1.0.0",
   "description": "Get INSEE code from zipcode and city name",
   "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-only": "ava test.js --tap | tap-diff",
+    "test": "./node_modules/.bin/nyc --check-coverage --lines 80 --functions 80 --branches 80 npm run test-only; ./node_modules/.bin/nyc report --reporter=html",
+    "open": "./node_modules/.bin/opn ./coverage/index.html"
   },
   "author": "joliscri.pt <joli.script@gmail.com> (http://joliscri.pt/)",
   "license": "uncopyrighted",
   "dependencies": {
+    "ava": "^0.13.0",
+    "opn-cli": "^3.1.0",
     "superagent": "^1.7.2"
+  },
+  "devDependencies": {
+    "nyc": "^6.0.0",
+    "tap-diff": "^0.1.1"
   }
 }

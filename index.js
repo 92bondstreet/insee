@@ -10,7 +10,7 @@ const PUBLIC_OPEN_DATA = 'http://public.opendatasoft.com/api/records/1.0/search/
  * @return {String}
  */
 let code = function code (body) {
-  let records = body.records || [];
+  let records = body.records;
 
   if (records.length === 0) {
     return null;
@@ -35,6 +35,6 @@ module.exports = function insee (zipcode, city, callback) {
   .get(PUBLIC_OPEN_DATA)
   .query({'q': `${zipcode} ${city}`})
   .end((err, res) => {
-    callback && callback(err, code(res && res.body || {}));
+    callback && callback(err, code(res && res.body));
   });
 };

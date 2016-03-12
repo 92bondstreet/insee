@@ -1,5 +1,7 @@
 # INSEE
 
+[![Build Status](https://travis-ci.org/92bondstreet/insee.svg?branch=master)](https://travis-ci.org/92bondstreet/insee)
+
 > Get INSEE code from zipcode and city name
 
 ## ... Work in progress ...
