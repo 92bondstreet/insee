@@ -9,6 +9,7 @@
   "scripts": {
     "test-only": "ava test.js --tap | tap-diff",
     "test": "./node_modules/.bin/nyc --check-coverage --lines 80 --functions 80 --branches 80 npm run test-only; ./node_modules/.bin/nyc report --reporter=html",
+    "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls",
     "open": "./node_modules/.bin/opn ./coverage/index.html"
   },
   "author": "joliscri.pt <joli.script@gmail.com> (http://joliscri.pt/)",
@@ -19,6 +20,7 @@
     "superagent": "^1.7.2"
   },
   "devDependencies": {
+    "coveralls": "^2.11.9",
     "nyc": "^6.0.0",
     "tap-diff": "^0.1.1"
   }

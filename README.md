@@ -1,6 +1,7 @@
 # INSEE
 
 [![Build Status](https://travis-ci.org/92bondstreet/insee.svg?branch=master)](https://travis-ci.org/92bondstreet/insee)
+[![Coverage Status](https://coveralls.io/repos/github/92bondstreet/insee/badge.svg?branch=master)](https://coveralls.io/github/92bondstreet/insee?branch=master)
 
 > Get INSEE code from zipcode and city name
 
